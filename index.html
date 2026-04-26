@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سحر العطور | Magic Perfumes - جاذبية لا تُقاوم.. وذاكرة لا تنسى</title>
+  <meta name="description" content="سحر العطور: عطور فاخرة ومنتجات عناية ننتقي مكوناتها من قلب الطبيعة ومن أرقى المصادر العالمية.">
+  <meta property="og:image" content="og-image.jpg">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+/* ELEGANT COLOR PALETTE */
+:root{
+  --navy:#1a237e;--navy-light:#3f51b5;--navy-dark:#0d114a;
+  --deep:#08060d;--dark:#0e0b18;--dark2:#14102a;
+  --card:rgba(255,255,255,0.04);--border:rgba(26,35,126,0.25);
+  --text:#d4cee8;--muted:#8a84a0;--heading:#ffffff;
+  --header-bg:#ffffff;--radius:16px;
+  --trans:all 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+  --accent-gold:#f97316;--accent-silver:#64748b;
+}
+[data-theme="light"]{
+  --deep:#faf8f3;--dark:#f0ede4;--dark2:#ffffff;
+  --border:rgba(26,35,126,0.15);--text:#4a4060;--muted:#7a7090;
+  --heading:#1a0f2e;--header-bg:#ffffff;
+  --navy:#000080;--navy-light:#283593;
+  --accent-gold:#ea580c;--accent-silver:#475569;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Tajawal',sans-serif;background:var(--deep);color:var(--text);overflow-x:hidden;transition:background 0.4s,color 0.4s;}
+
+/* LOADER */
+#loader{position:fixed;inset:0;z-index:99999;background:var(--deep);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1.5rem;transition:opacity 0.7s,visibility 0.7s;}
+#loader.gone{opacity:0;visibility:hidden;}
+.ld-logo{width:100px;animation:ldp 1.5s ease-in-out infinite;}
+@keyframes ldp{0%,100%{opacity:0.4;transform:scale(0.93);}50%{opacity:1;transform:scale(1.05);}}
+.ld-bar{width:220px;height:3px;background:rgba(26,35,126,0.2);border-radius:2px;overflow:hidden;}
+.ld-fill{height:100%;background:linear-gradient(90deg,var(--navy-dark),var(--navy),var(--navy-light));animation:ldf 2.2s ease forwards;}
+@keyframes ldf{0%{width:0%;}100%{width:100%;}}
+.ld-text{font-size:0.8rem;color:var(--navy);letter-spacing:3px;font-weight:600;animation:ldp 1.5s ease-in-out infinite;}
+
+/* PROGRESS */
+#progress{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--navy-dark),var(--navy),var(--navy-light));z-index:10001;transition:width 0.1s;}
+
+/* ELEGANT HEADER */
+header{position:fixed;top:0;left:0;right:0;z-index:1000;background:#ffffff !important;backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom:1px solid rgba(26,35,126,0.12);transition:var(--trans);padding:0.8rem 0;box-shadow:none !important;}
+header.scrolled{background:#ffffff !important;box-shadow:none !important;padding:0.6rem 0;border-bottom:2px solid rgba(26,35,126,0.18);}
+.hdr-inner{max-width:1400px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;}
+
+/* LOGO - Elegant Design */
+.logo-wrap img{height:78px;transition:var(--trans);filter:drop-shadow(0 0 5px rgba(0,0,0,0.1));}
+header.scrolled .logo-wrap img{height:54px;}
+
+/* NAVIGATION - Elegant Design */
+nav.main-nav{display:flex;align-items:center;gap:0.3rem;}
+.nav-a{position:relative;padding:0.7rem 1rem;font-weight:700;font-size:0.9rem;color:#1a237e !important;text-decoration:none;transition:all 0.3s ease;border-radius:12px;background:transparent;}
+.nav-a::after{content:'';position:absolute;bottom:2px;right:50%;left:50%;height:3px;background:linear-gradient(90deg,var(--navy-dark),var(--navy-light),var(--navy-dark));transition:all 0.3s;border-radius:2px;}
+.nav-a:hover{color:var(--navy-light) !important;background:rgba(26,35,126,0.06);transform:translateY(-1px);}
+.nav-a:hover::after,.nav-a.active::after{right:10%;left:10%;}
+.nav-a.active{color:var(--navy) !important;background:rgba(26,35,126,0.08);font-weight:800;}
+
+/* DROPDOWN */
+.dropdown{position:relative;}
+.dd-menu{position:absolute;top:calc(100%+12px);right:0;background:var(--dark2);border:1px solid var(--border);border-radius:14px;padding:0.5rem;min-width:230px;opacity:0;visibility:hidden;transform:translateY(8px);transition:var(--trans);z-index:200;box-shadow:0 20px 50px rgba(0,0,0,0.3);}
+.dropdown:hover .dd-menu{opacity:1;visibility:visible;transform:translateY(0);}
+.dd-menu a{display:flex;align-items:center;gap:0.7rem;padding:0.65rem 1rem;color:var(--text);text-decoration:none;border-radius:8px;font-size:0.88rem;transition:0.2s;}
+.dd-menu a:hover{background:rgba(26,35,126,0.1);color:var(--navy-light);}
+
+/* HEADER ICONS - Elegant Design */
+.hdr-icons{display:flex;align-items:center;gap:0.8rem;}
+.hdr-btn{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,rgba(26,35,126,0.05),rgba(26,35,126,0.02));border:2px solid rgba(26,35,126,0.15);color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:all 0.3s ease;text-decoration:none;font-family:'Tajawal',sans-serif;position:relative;overflow:hidden;}
+.hdr-btn::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--navy),var(--navy-light));opacity:0;transition:opacity 0.3s;}
+.hdr-btn:hover{border-color:var(--navy-light);color:#ffffff;transform:translateY(-2px) scale(1.05);box-shadow:0 8px 25px rgba(26,35,126,0.25);}
+.hdr-btn:hover::before{opacity:1;}
+.hdr-btn i{position:relative;z-index:1;}
+.hamburger{width:30px;height:20px;flex-direction:column;justify-content:space-between;cursor:pointer;display:none;}
+.hamburger span{display:block;height:2px;background:var(--navy);border-radius:2px;transition:var(--trans);}
+
+/* MOBILE MENU */
+.mob-menu{position:fixed;top:0;right:-300px;width:270px;height:100dvh;background:var(--dark);z-index:1100;transition:right 0.4s cubic-bezier(0.68,-0.3,0.27,1.4);border-left:1px solid var(--border);padding:1.5rem;overflow-y:auto;display:flex;flex-direction:column;gap:0.4rem;}
+.mob-menu.open{right:0;}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:1050;display:none;backdrop-filter:blur(4px);}
+.overlay.show{display:block;}
+.mob-a{display:block;padding:0.85rem 0.5rem;border-bottom:1px solid var(--border);color:var(--heading);text-decoration:none;font-weight:600;font-size:0.95rem;transition:0.2s;}
+.mob-a:hover{color:var(--navy-light);padding-right:1rem;}
+
+/* SEARCH PANEL */
+.search-panel{position:fixed;top:0;left:0;right:0;z-index:2000;background:var(--deep);padding:1.5rem 0;transform:translateY(-100%);transition:transform 0.4s ease;border-bottom:1px solid var(--border);box-shadow:0 20px 50px rgba(0,0,0,0.5);}
+.search-panel.open{transform:translateY(0);}
+.srch-inner{max-width:750px;margin:0 auto;padding:0 1.5rem;display:flex;gap:1rem;align-items:center;}
+.srch-input{flex:1;padding:1rem 1.5rem;border-radius:50px;background:rgba(255,255,255,0.06);border:1.5px solid var(--border);color:var(--heading);font-family:'Tajawal',sans-serif;font-size:1rem;outline:none;transition:0.3s;}
+.srch-input:focus{border-color:var(--navy);}
+.srch-close{background:none;border:none;color:var(--text);font-size:1.5rem;cursor:pointer;padding:0.5rem;line-height:1;}
+.srch-results{max-width:750px;margin:1rem auto 0;padding:0 1.5rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:0.7rem;max-height:55vh;overflow-y:auto;}
+.s-item{padding:0.8rem 1rem;border-radius:10px;border:1px solid var(--border);background:rgba(255,255,255,0.04);cursor:pointer;transition:0.2s;}
+.s-item:hover{border-color:var(--navy);background:rgba(26,35,126,0.08);}
+.s-item h4{font-size:0.88rem;color:var(--heading);margin-bottom:0.2rem;}
+.s-item p{font-size:0.75rem;color:var(--muted);}
+.no-res{grid-column:1/-1;text-align:center;color:var(--muted);padding:2rem;}
+
+/* HERO - Elegant Design */
+#home{position:relative;min-height:100dvh;display:flex;align-items:center;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:url('sor2.jpg') center/cover no-repeat;z-index:0;}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(8,6,13,0.98) 0%,rgba(8,6,13,0.75) 55%,rgba(8,6,13,0.95) 100%);}
+.particles-wrap{position:absolute;inset:0;z-index:1;overflow:hidden;pointer-events:none;}
+.particle{position:absolute;width:3px;height:3px;border-radius:50%;background:var(--accent-gold);opacity:0;animation:p-rise var(--dur,4s) var(--dl,0s) ease-in-out infinite;}
+@keyframes p-rise{0%{opacity:0;transform:translateY(0) scale(1);}20%{opacity:0.9;}100%{opacity:0;transform:translateY(-130px) translateX(var(--drift,20px)) scale(0.2);}}
+.hero-grid{position:relative;z-index:2;max-width:1400px;margin:0 auto;padding:8rem 2rem 4rem;width:100%;display:grid;grid-template-columns:55% 45%;gap:3rem;align-items:center;}
+.hero-text{animation:floatText 6s ease-in-out infinite;}
+@keyframes floatText{0%,100%{transform:translateY(0);}50%{transform:translateY(-20px);}}
+
+.hero-badge{display:inline-flex;align-items:center;gap:0.6rem;padding:0.5rem 1.5rem;border:2px solid var(--accent-gold);border-radius:50px;font-size:0.85rem;color:var(--accent-gold);margin-bottom:1.8rem;background:rgba(249,115,22,0.1);backdrop-filter:blur(10px);animation:hb-in 0.8s ease 0.3s both;font-weight:700;letter-spacing:1px;}
+@keyframes hb-in{from{opacity:0;transform:translateY(-15px);}to{opacity:1;transform:translateY(0);}}
+.hero-title{font-size:clamp(2.8rem,6vw,5.5rem);font-weight:900;line-height:1.05;color:#ffffff;margin-bottom:0.8rem;animation:ht-in 0.9s ease 0.5s both;text-shadow:0 4px 20px rgba(0,0,0,0.3);background:linear-gradient(135deg,#ffffff 0%,#f8fafc 50%,#ffffff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+@keyframes ht-in{from{opacity:0;transform:translateX(40px);}to{opacity:1;transform:translateX(0);}}
+.hero-sub{font-family:'Cinzel',serif;font-size:clamp(1rem,2.2vw,1.6rem);color:var(--accent-gold);margin-bottom:1.8rem;letter-spacing:4px;animation:ht-in 0.9s ease 0.7s both;font-weight:600;text-shadow:0 2px 10px rgba(249,115,22,0.3);}
+.hero-desc{font-size:1.05rem;line-height:1.9;color:#e2e8f0;max-width:520px;margin-bottom:2.8rem;animation:ht-in 0.9s ease 0.9s both;text-shadow:0 1px 3px rgba(0,0,0,0.2);}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;animation:ht-in 0.9s ease 1.1s both;}
+.btn-g{padding:1rem 2.5rem;background:linear-gradient(135deg,var(--accent-gold),#dc2626);color:#ffffff;font-weight:800;border-radius:50px;text-decoration:none;font-size:0.95rem;transition:all 0.3s ease;border:none;cursor:pointer;font-family:'Tajawal',sans-serif;display:inline-flex;align-items:center;gap:0.8rem;box-shadow:0 8px 25px rgba(249,115,22,0.3);position:relative;overflow:hidden;}
+.btn-g:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(249,115,22,0.5);filter:brightness(1.1);}
+.btn-o{padding:1rem 2.5rem;background:transparent;color:var(--accent-gold);font-weight:700;border-radius:50px;text-decoration:none;font-size:0.95rem;transition:all 0.3s ease;border:2px solid var(--accent-gold);display:inline-flex;align-items:center;gap:0.8rem;font-family:'Tajawal',sans-serif;}
+.btn-o:hover{background:var(--accent-gold);color:#ffffff;transform:translateY(-4px);box-shadow:0 15px 35px rgba(249,115,22,0.4);}
+
+/* BOTTLE SVG */
+.hero-visual{display:flex;align-items:center;justify-content:center;animation:hv-in 1.2s ease 0.4s both; animation: floatBottle 5s ease-in-out infinite;}
+@keyframes floatBottle { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-30px) rotate(2deg); } }
+@keyframes hv-in{from{opacity:0;transform:translateX(-40px);}to{opacity:1;transform:translateX(0);}}
+.bottle-wrap{position:relative;width:300px;height:360px;}
+.bottle-glow{position:absolute;inset:-20px;border-radius:50%;background:radial-gradient(ellipse at center,rgba(26,35,126,0.22) 0%,transparent 70%);animation:bg-pulse 3.5s ease-in-out infinite;}
+@keyframes bg-pulse{0%,100%{transform:scale(1);opacity:0.6;}50%{transform:scale(1.12);opacity:1;}}
+
+/* SCROLL IND */
+.scroll-ind{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:0.4rem;color:var(--muted);font-size:0.75rem;letter-spacing:2px;animation:sc-b 2.5s ease-in-out infinite;}
+@keyframes sc-b{0%,100%{transform:translateX(-50%) translateY(0);}50%{transform:translateX(-50%) translateY(9px);}}
+
+/* SECTIONS - Elegant Design */
+section{position:relative;overflow:hidden;}
+.container{max-width:1300px;margin:0 auto;padding:0 1.5rem;}
+.sec-pad{padding:7rem 0;}
+.sec-title{text-align:center;margin-bottom:4.5rem;position:relative;}
+.sec-title h2{font-size:clamp(2rem,3.5vw,3rem);font-weight:900;color:var(--heading);margin-bottom:1rem;display:inline-flex;align-items:center;gap:1rem;position:relative;}
+.sec-title h2 i{color:var(--accent-gold);font-size:1.2rem;}
+.sec-title p{color:var(--muted);max-width:600px;margin:1.2rem auto 0;line-height:1.9;font-size:1rem;}
+.gold-bar{display:block;width:70px;height:4px;background:linear-gradient(90deg,var(--accent-gold),#dc2626);margin:1rem auto 0;border-radius:3px;box-shadow:0 4px 15px rgba(249,115,22,0.3);}
+
+/* FADE ANIM */
+.fade-up{opacity:0;transform:translateY(35px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.fade-left{opacity:0;transform:translateX(35px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.fade-right{opacity:0;transform:translateX(-35px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.fade-scale{opacity:0;transform:scale(0.91);transition:opacity 0.7s ease,transform 0.7s ease;}
+.visible{opacity:1!important;transform:none!important;}
+.d1{transition-delay:0.1s!important;}.d2{transition-delay:0.2s!important;}
+.d3{transition-delay:0.3s!important;}.d4{transition-delay:0.4s!important;}
+.d5{transition-delay:0.5s!important;}
+
+/* FEATURES STRIP - Elegant Design */
+.feats-strip{background:linear-gradient(135deg,var(--dark2),var(--dark));border-top:2px solid var(--accent-gold);border-bottom:2px solid var(--accent-gold);position:relative;overflow:hidden;}
+.feats-strip::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(249,115,22,0.05),transparent);animation:shimmer 3s ease-in-out infinite;}
+@keyframes shimmer{0%,100%{transform:translateX(-100%);}50%{transform:translateX(100%);}}
+.feats-inner{display:grid;grid-template-columns:repeat(4,1fr);max-width:1300px;margin:0 auto;padding:0 1.5rem;position:relative;z-index:1;}
+.feat-item{display:flex;align-items:center;gap:1rem;padding:2rem 1rem 2rem 2rem;border-right:1px solid rgba(249,115,22,0.2);transition:all 0.3s ease;}
+.feat-item:last-child{border-right:none;}
+.feat-item:hover{transform:translateY(-2px);background:rgba(249,115,22,0.05);}
+.feat-icon{width:54px;height:54px;border-radius:16px;background:linear-gradient(135deg,var(--accent-gold),#dc2626);display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:#ffffff;flex-shrink:0;box-shadow:0 8px 20px rgba(249,115,22,0.3);}
+.feat-title{font-size:0.95rem;font-weight:800;color:var(--heading);margin-bottom:0.2rem;}
+.feat-sub{font-size:0.78rem;color:var(--accent-gold);font-weight:600;}
+
+/* STORY TIMELINE - BackgroundImage Added */
+#story{background:var(--dark); position: relative;}
+#story::before {
+  content:''; position:absolute; inset:0; 
+  background: url('sor1.jpg') center/cover no-repeat; 
+  opacity: 0.1; z-index: 0; 
+}
+.container-story { position: relative; z-index: 1; }
+.timeline{position:relative;max-width:860px;margin:0 auto;}
+.timeline::before{content:'';position:absolute;right:50%;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,transparent,var(--navy),transparent);transform:translateX(50%);}
+.t-item{display:grid;grid-template-columns:1fr 56px 1fr;gap:1.5rem;align-items:center;margin-bottom:3rem;}
+.t-card{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:var(--radius);padding:1.6rem;transition:var(--trans); backdrop-filter: blur(10px);}
+.t-card:hover{border-color:rgba(26,35,126,0.4);transform:translateY(-3px);}
+.t-card h3{color:var(--navy-light);font-size:1.05rem;font-weight:700;margin-bottom:0.6rem;}
+.t-card p{font-size:0.88rem;line-height:1.85;color:var(--text);}
+.t-dot{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,var(--navy-dark),var(--navy));display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff;font-size:1.1rem;z-index:2;box-shadow:0 0 25px rgba(26,35,126,0.4);}
+.t-empty{}
+
+/* PRODUCTS - Elegant Design */
+#products{background:var(--deep);position:relative;}
+#products::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(249,115,22,0.08) 0%,transparent 50%);pointer-events:none;}
+.filters{display:flex;gap:0.8rem;justify-content:center;flex-wrap:wrap;margin-bottom:3.5rem;}
+.f-btn{padding:0.7rem 1.5rem;border-radius:50px;background:transparent;border:2px solid var(--accent-gold);color:var(--accent-gold);cursor:pointer;font-family:'Tajawal',sans-serif;font-size:0.9rem;font-weight:700;transition:all 0.3s ease;position:relative;overflow:hidden;}
+.f-btn::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--accent-gold),#dc2626);opacity:0;transition:opacity 0.3s;}
+.f-btn:hover,.f-btn.on{color:#ffffff;border-color:var(--accent-gold);transform:translateY(-2px);box-shadow:0 8px 20px rgba(249,115,22,0.3);}
+.f-btn:hover::before,.f-btn.on::before{opacity:1;}
+.f-btn span{position:relative;z-index:1;}
+.prod-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:2rem;}
+.prod-card{background:rgba(255,255,255,0.04);border:2px solid var(--border);border-radius:24px;overflow:hidden;transition:all 0.4s ease;display:flex;flex-direction:column;position:relative;}
+.prod-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(249,115,22,0.05),transparent);opacity:0;transition:opacity 0.3s;}
+.prod-card:hover::before{opacity:1;}
+.prod-card:hover{transform:translateY(-8px);border-color:var(--accent-gold);box-shadow:0 30px 60px rgba(0,0,0,0.4);}
+.prod-img{position:relative;height:240px;overflow:hidden;background:linear-gradient(135deg,var(--dark2),var(--dark));}
+.prod-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s ease;}
+.prod-card:hover .prod-img img{transform:scale(1.08);}
+.prod-badge{position:absolute;top:1.2rem;right:1.2rem;background:linear-gradient(135deg,var(--accent-gold),#dc2626);border:2px solid rgba(249,115,22,0.3);color:#ffffff;padding:0.4rem 1rem;border-radius:50px;font-size:0.75rem;font-weight:800;backdrop-filter:blur(8px);box-shadow:0 4px 15px rgba(249,115,22,0.4);}
+.prod-info{padding:2rem;flex:1;display:flex;flex-direction:column;}
+.prod-icon{width:54px;height:54px;border-radius:16px;background:linear-gradient(135deg,var(--accent-gold),#dc2626);border:2px solid rgba(249,115,22,0.2);display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:#ffffff;margin-bottom:1.2rem;box-shadow:0 8px 20px rgba(249,115,22,0.3);}
+.prod-info h3{color:var(--heading);font-size:1.1rem;font-weight:800;margin-bottom:0.6rem;line-height:1.4;}
+.prod-info p{color:var(--text);font-size:0.9rem;line-height:1.8;margin-bottom:1.5rem;flex:1;}
+.btn-wa{width:100%;padding:1rem;background:linear-gradient(135deg,var(--accent-gold),#dc2626);border:2px solid var(--accent-gold);color:#ffffff;border-radius:14px;font-family:'Tajawal',sans-serif;font-size:0.95rem;font-weight:800;cursor:pointer;transition:all 0.3s ease;display:flex;align-items:center;justify-content:center;gap:0.7rem;box-shadow:0 8px 20px rgba(249,115,22,0.3);text-decoration:none;position:relative;overflow:hidden;}
+.btn-wa::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,#25d366,#0a7a69);opacity:0;transition:opacity 0.3s;}
+.btn-wa:hover::before{opacity:1;}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 15px 35px rgba(37,211,102,0.5);filter:brightness(1.1);color:#ffffff;}
+.btn-wa i{position:relative;z-index:1;}
+.btn-wa span{position:relative;z-index:1;}
+
+/* EXCELLENCE - BackgroundImage Added */
+#excellence{background:var(--dark); position: relative;}
+#excellence::before {
+  content:''; position:absolute; inset:0; 
+  background: url('sor3.jpg') center/cover no-repeat; 
+  opacity: 0.1; z-index: 0; 
+}
+.container-ex { position: relative; z-index: 1; }
+.ex-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+.ex-card{position:relative;border-radius:20px;overflow:hidden;min-height:250px;display:flex;align-items:flex-end;cursor:default;}
+.ex-card:first-child{min-height:380px;grid-row:span 2;}
+.ex-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 0.7s ease;}
+.ex-card:hover img{transform:scale(1.06);}
+.ex-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,6,13,0.95) 0%,rgba(8,6,13,0.2) 60%,transparent 100%);}
+.ex-content{position:relative;z-index:2;padding:1.5rem;width:100%;}
+.ex-icon{width:46px;height:46px;border-radius:12px;background:rgba(26,35,126,0.15);border:1px solid rgba(26,35,126,0.3);display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--navy-light);margin-bottom:0.7rem;}
+
+/* PREMIUM FEATURES - Elegant Design */
+.premium-features{background:linear-gradient(135deg,var(--dark),var(--deep));position:relative;overflow:hidden;}
+.premium-features::before{content:'';position:absolute;inset:0;background:url('sor5.jpg') center/cover no-repeat;opacity:0.08;z-index:0;}
+.premium-features::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(8,6,13,0.95),rgba(14,10,28,0.92));z-index:1;}
+.premium-features .container{position:relative;z-index:2;}
+.premium-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2.5rem;margin-top:3rem;}
+.premium-card{background:rgba(255,255,255,0.03);border:2px solid rgba(249,115,22,0.2);border-radius:24px;padding:2.5rem;transition:all 0.4s ease;position:relative;overflow:hidden;}
+.premium-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(249,115,22,0.08),transparent);opacity:0;transition:opacity 0.3s;}
+.premium-card:hover::before{opacity:1;}
+.premium-card:hover{transform:translateY(-8px);border-color:var(--accent-gold);box-shadow:0 25px 50px rgba(249,115,22,0.2);}
+.premium-icon{width:70px;height:70px;border-radius:20px;background:linear-gradient(135deg,var(--accent-gold),#dc2626);display:flex;align-items:center;justify-content:center;font-size:1.8rem;color:#ffffff;margin-bottom:1.5rem;box-shadow:0 10px 30px rgba(249,115,22,0.4);position:relative;}
+.premium-icon::after{content:'';position:absolute;inset:-5px;border-radius:25px;background:linear-gradient(135deg,var(--accent-gold),#dc2626);opacity:0.2;z-index:-1;animation:pulse 2s ease-in-out infinite;}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:0.2;}50%{transform:scale(1.05);opacity:0.3;}}
+.premium-card h3{color:var(--heading);font-size:1.3rem;font-weight:800;margin-bottom:1rem;}
+.premium-card p{color:var(--text);font-size:0.95rem;line-height:1.9;margin-bottom:1.5rem;}
+.premium-features-list{list-style:none;}
+.premium-features-list li{display:flex;align-items:center;gap:0.8rem;margin-bottom:0.8rem;color:var(--text);font-size:0.9rem;}
+.premium-features-list li i{color:var(--accent-gold);font-size:0.8rem;}
+
+/* ENHANCED STATS SECTION */
+#stats{position:relative;}
+.stats-bg{position:absolute;inset:0;background:url('sor6.jpg') center/cover no-repeat;}
+.stats-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(8,6,13,0.96),rgba(14,10,28,0.92));}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;position:relative;z-index:2;}
+.stat-card{text-align:center;padding:3rem 1.5rem;border-radius:24px;background:rgba(255,255,255,0.05);border:2px solid rgba(249,115,22,0.2);backdrop-filter:blur(15px);transition:all 0.3s ease;position:relative;overflow:hidden;}
+.stat-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(249,115,22,0.05),transparent);opacity:0;transition:opacity 0.3s;}
+.stat-card:hover::before{opacity:1;}
+.stat-card:hover{transform:translateY(-5px);border-color:var(--accent-gold);box-shadow:0 20px 40px rgba(249,115,22,0.2);}
+.stat-ic{font-size:2.5rem;color:var(--accent-gold);margin-bottom:1.2rem;display:block;}
+.stat-num{font-size:3.5rem;font-weight:900;color:#ffffff;line-height:1;margin-bottom:0.8rem;text-shadow:0 4px 15px rgba(0,0,0,0.3);}
+.stat-lbl{color:var(--accent-gold);font-size:0.95rem;font-weight:700;letter-spacing:1px;}
+
+/* VISION */
+#vision-mission{background:var(--deep);}
+.vm-wrap{display:grid;grid-template-columns:1fr 1fr;border-radius:22px;overflow:hidden;border:1px solid var(--border);}
+.vm-card{padding:3.5rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:1.2rem;}
+.vm-card:first-child{background:linear-gradient(135deg,rgba(26,35,126,0.09),rgba(26,35,126,0.02));}
+.vm-card:last-child{background:rgba(255,255,255,0.025);}
+.vm-icon{width:78px;height:78px;border-radius:50%;background:linear-gradient(135deg,var(--navy-dark),var(--navy));display:flex;align-items:center;justify-content:center;font-size:1.8rem;color:#fff;box-shadow:0 0 30px rgba(26,35,126,0.35);}
+.vm-card h3{font-size:1.4rem;font-weight:800;color:var(--heading);}
+.vm-card p{color:var(--text);line-height:1.9;font-size:0.92rem;}
+
+/* GOALS */
+#goals{position:relative;}
+.goals-bg{position:absolute;inset:0;background:url('sor1.jpg') center/cover no-repeat;}
+.goals-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(8,6,13,0.91),rgba(14,10,28,0.86));}
+.goals-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;position:relative;z-index:2;}
+.goal-card{display:flex;flex-direction:column;align-items:center;text-align:center;gap:0.7rem;padding:2rem 0.8rem;border-radius:18px;border:2px solid var(--border);background:rgba(255,255,255,0.04);transition:var(--trans);}
+.goal-card:hover{border-color:var(--navy-light);background:rgba(26,35,126,0.08);transform:translateY(-5px);}
+.goal-num{font-family:'Cinzel',serif;font-size:1.9rem;font-weight:700;color:var(--navy-light);}
+.goal-icon{font-size:1.4rem;color:var(--navy-light);}
+.goal-lbl{font-size:0.82rem;font-weight:700;color:#fff;}
+.goal-sub{font-size:0.72rem;color:rgba(255,255,255,0.45);}
+
+/* ENHANCED TESTIMONIALS */
+#community{background:var(--dark);position:relative;}
+#community::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(249,115,22,0.08) 0%,transparent 50%);pointer-events:none;}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:2rem;}
+.t-card2{background:rgba(255,255,255,0.04);border:2px solid rgba(249,115,22,0.15);border-radius:24px;padding:2.2rem;transition:all 0.4s ease;position:relative;overflow:hidden;}
+.t-card2::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(249,115,22,0.05),transparent);opacity:0;transition:opacity 0.3s;}
+.t-card2:hover::before{opacity:1;}
+.t-card2:hover{border-color:var(--accent-gold);transform:translateY(-6px);box-shadow:0 25px 50px rgba(249,115,22,0.15);}
+.t-stars{color:var(--accent-gold);letter-spacing:4px;font-size:0.9rem;margin-bottom:1.2rem;text-shadow:0 2px 8px rgba(249,115,22,0.3);}
+.t-text{font-size:0.95rem;color:var(--text);line-height:2;margin-bottom:1.5rem;font-style:italic;}
+.t-author{display:flex;align-items:center;gap:1rem;}
+.t-avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--accent-gold),#dc2626);display:flex;align-items:center;justify-content:center;font-weight:800;color:#ffffff;font-size:0.9rem;flex-shrink:0;box-shadow:0 8px 20px rgba(249,115,22,0.3);}
+.t-name{font-weight:800;color:var(--heading);font-size:0.95rem;}
+.t-role{font-size:0.78rem;color:var(--accent-gold);font-weight:600;}
+
+/* CEO */
+#ceo{background:var(--deep);}
+.ceo-inner{max-width:820px;margin:0 auto;text-align:center;position:relative;padding:2rem;}
+.ceo-quote-text{font-size:clamp(0.95rem,2vw,1.3rem);color:var(--text);line-height:2;margin-bottom:2rem;}
+.ceo-name{color:var(--navy-light);font-weight:700;font-size:0.95rem;}
+
+/* ENHANCED CONTACT SECTION */
+#contact{background:var(--dark);position:relative;}
+#contact::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 80%,rgba(249,115,22,0.06) 0%,transparent 50%);pointer-events:none;}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;}
+.cbox{background:rgba(255,255,255,0.04);border:2px solid rgba(249,115,22,0.15);border-radius:24px;padding:3rem;transition:all 0.3s ease;position:relative;overflow:hidden;}
+.cbox::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(249,115,22,0.05),transparent);opacity:0;transition:opacity 0.3s;}
+.cbox:hover::before{opacity:1;}
+.cbox:hover{border-color:var(--accent-gold);transform:translateY(-3px);box-shadow:0 20px 40px rgba(249,115,22,0.15);}
+.cbox h3{color:var(--heading);font-size:1.4rem;font-weight:800;margin-bottom:2rem;display:flex;align-items:center;gap:0.8rem;}
+.cbox h3 i{color:var(--accent-gold);font-size:1.2rem;}
+.c-row{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;transition:transform 0.2s ease;}
+.c-row:hover{transform:translateX(5px);}
+.c-icon{width:50px;height:50px;border-radius:16px;background:linear-gradient(135deg,var(--accent-gold),#dc2626);border:2px solid rgba(249,115,22,0.2);display:flex;align-items:center;justify-content:center;color:#ffffff;font-size:1.1rem;flex-shrink:0;box-shadow:0 8px 20px rgba(249,115,22,0.3);}
+.c-val{font-size:0.95rem;color:var(--text);font-weight:500;}
+.c-val a{color:var(--text);text-decoration:none;transition:color 0.2s;}
+.c-val a:hover{color:var(--accent-gold);}
+.wa-big{margin-top:2rem;width:100%;padding:1.2rem;background:linear-gradient(135deg,#0a7a69,#25d366);border:none;border-radius:16px;color:#ffffff;font-family:'Tajawal',sans-serif;font-size:1.05rem;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.8rem;transition:all 0.3s ease;box-shadow:0 10px 30px rgba(37,211,102,0.4);}
+.wa-big:hover{transform:translateY(-3px);box-shadow:0 20px 50px rgba(37,211,102,0.6);filter:brightness(1.1);}
+.form-ctrl{width:100%;padding:1rem 1.5rem;background:rgba(255,255,255,0.06);border:2px solid rgba(249,115,22,0.2);border-radius:16px;color:var(--heading);font-family:'Tajawal',sans-serif;font-size:0.95rem;outline:none;transition:all 0.3s ease;margin-bottom:1.2rem;}
+.form-ctrl:focus{border-color:var(--accent-gold);background:rgba(255,255,255,0.08);box-shadow:0 0 20px rgba(249,115,22,0.2);}
+.form-ctrl::placeholder{color:var(--muted);}
+textarea.form-ctrl{resize:vertical;min-height:120px;}
+.btn-send{width:100%;padding:1.2rem;background:linear-gradient(135deg,var(--accent-gold),#dc2626);border:none;border-radius:16px;color:#ffffff;font-family:'Tajawal',sans-serif;font-size:1.05rem;font-weight:800;cursor:pointer;transition:all 0.3s ease;box-shadow:0 10px 30px rgba(249,115,22,0.4);}
+.btn-send:hover{transform:translateY(-3px);box-shadow:0 20px 50px rgba(249,115,22,0.6);filter:brightness(1.1);}
+
+/* ENHANCED FOOTER */
+footer{background:var(--deep);border-top:2px solid rgba(249,115,22,0.2);position:relative;overflow:hidden;}
+footer::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(249,115,22,0.05) 0%,transparent 50%);pointer-events:none;}
+.foot-main{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem;padding:5rem 0 3rem;position:relative;z-index:1;}
+.foot-logo img{height:70px;margin-bottom:1.5rem;filter:drop-shadow(0 4px 15px rgba(249,115,22,0.3));}
+.foot-tag{font-size:0.95rem;color:var(--muted);line-height:1.9;margin-bottom:1.5rem;}
+.social-row{display:flex;gap:0.8rem;margin-top:1.5rem;}
+.soc-btn{width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,0.05);border:2px solid rgba(249,115,22,0.2);color:var(--muted);display:flex;align-items:center;justify-content:center;font-size:1rem;text-decoration:none;transition:all 0.3s ease;}
+.soc-btn:hover{border-color:var(--accent-gold);color:var(--accent-gold);background:rgba(249,115,22,0.1);transform:translateY(-2px);box-shadow:0 8px 20px rgba(249,115,22,0.2);}
+.foot-col h4{color:var(--heading);font-size:1rem;font-weight:800;margin-bottom:1.5rem;display:flex;align-items:center;gap:0.5rem;}
+.foot-col h4 i{color:var(--accent-gold);font-size:0.9rem;}
+.foot-col ul{list-style:none;}
+.foot-col ul li{margin-bottom:0.7rem;}
+.foot-col ul li a{color:var(--muted);text-decoration:none;font-size:0.9rem;transition:all 0.2s ease;display:inline-flex;align-items:center;gap:0.5rem;}
+.foot-col ul li a::before{content:'→';color:var(--accent-gold);font-size:0.8rem;opacity:0;transition:all 0.2s;}
+.foot-col ul li a:hover{color:var(--accent-gold);padding-right:0.5rem;}
+.foot-col ul li a:hover::before{opacity:1;}
+.foot-bottom{border-top:2px solid rgba(249,115,22,0.2);padding:2rem 0;text-align:center;font-size:0.85rem;color:var(--muted);position:relative;z-index:1;}
+.foot-bottom a{color:var(--accent-gold);font-weight:800;text-decoration:none;transition:all 0.2s;}
+.foot-bottom a:hover{color:#dc2626;text-shadow:0 2px 8px rgba(249,115,22,0.3);}
+
+/* ENHANCED FLOATING BUTTONS */
+.wa-float{position:fixed;bottom:2rem;right:2rem;width:64px;height:64px;background:linear-gradient(135deg,#25d366,#0a7a69);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;color:#ffffff;box-shadow:0 15px 40px rgba(37,211,102,0.6);z-index:90;transition:all 0.3s ease;text-decoration:none;}
+.wa-float:hover{transform:scale(1.15) rotate(5deg);box-shadow:0 20px 50px rgba(37,211,102,0.8);}
+.phone-float{position:fixed;bottom:7rem;right:2rem;width:54px;height:54px;background:linear-gradient(135deg,var(--accent-gold),#dc2626);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:#ffffff;box-shadow:0 12px 35px rgba(249,115,22,0.6);z-index:90;transition:all 0.3s ease;text-decoration:none;}
+.phone-float:hover{transform:scale(1.15) rotate(-5deg);box-shadow:0 18px 45px rgba(249,115,22,0.8);}
+.top-btn{position:fixed;bottom:2rem;left:2rem;width:52px;height:52px;background:rgba(255,255,255,0.1);border:2px solid rgba(249,115,22,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--accent-gold);cursor:pointer;z-index:90;transition:all 0.3s ease;opacity:0;backdrop-filter:blur(10px);}
+.top-btn:hover{border-color:var(--accent-gold);background:rgba(249,115,22,0.1);transform:translateY(-3px);box-shadow:0 15px 35px rgba(249,115,22,0.3);}
+
+/* RESPONSIVE - Enhanced */
+@media(max-width:1024px){
+  .hero-grid{grid-template-columns:1fr;text-align:center;}
+  .hero-text{order:2;}.hero-visual{order:1;}
+  .hero-desc{margin:0 auto 2.5rem;}
+  .hero-btns{justify-content:center;}
+  .timeline::before{right:20px;}
+  .t-item{grid-template-columns:1fr 50px;gap:1rem;}
+  .t-item .t-empty{display:none;}
+  .t-dot{grid-column:2;}
+  .t-card{grid-column:1;}
+  .goals-grid{grid-template-columns:repeat(3,1fr);}
+  .stats-grid{grid-template-columns:repeat(2,1fr);}
+  .premium-grid{grid-template-columns:1fr;}
+  .feats-inner{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:768px){
+  .hamburger{display:flex;}
+  nav.main-nav{display:none;}
+  .hdr-btn[data-desk]{display:none;}
+  .hero-grid{padding:7rem 1.5rem 3rem;}
+  .ex-grid{grid-template-columns:1fr;}
+  .ex-card:first-child{grid-row:auto;min-height:250px;}
+  .vm-wrap{grid-template-columns:1fr;}
+  .contact-grid{grid-template-columns:1fr;}
+  .foot-main{grid-template-columns:1fr;}
+  .feats-inner{grid-template-columns:1fr;}
+  .feat-item{border-right:none;border-bottom:1px solid rgba(249,115,22,0.2);}
+  .goals-grid{grid-template-columns:repeat(2,1fr);}
+  .logo-wrap img{height:58px;}
+  .stats-grid{grid-template-columns:repeat(2,1fr);}
+  .premium-card{padding:2rem;}
+  .premium-icon{width:60px;height:60px;}
+  .testi-grid{grid-template-columns:1fr;}
+  .prod-grid{grid-template-columns:1fr;}
+}
+
+/* LIGHT OVERRIDES - Enhanced */
+[data-theme="light"] .hero-bg::after{background:linear-gradient(135deg,rgba(250,248,243,0.98) 0%,rgba(250,248,243,0.75) 55%,rgba(250,248,243,0.95) 100%);}
+[data-theme="light"] .hero-title{color:#1a0f2e;background:linear-gradient(135deg,#1a0f2e 0%,#2d1b69 50%,#1a0f2e 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+[data-theme="light"] .hero-sub{color:var(--accent-gold);}
+[data-theme="light"] .hero-desc{color:#4a4060;}
+[data-theme="light"] .hero-badge{background:rgba(249,115,22,0.1);border-color:var(--accent-gold);color:var(--accent-gold);}
+[data-theme="light"] .btn-g{background:linear-gradient(135deg,var(--accent-gold),#dc2626);}
+[data-theme="light"] .btn-o{border-color:var(--accent-gold);color:var(--accent-gold);}
+[data-theme="light"] .btn-o:hover{background:var(--accent-gold);color:#ffffff;}
+[data-theme="light"] .particle{background:var(--accent-gold);}
+[data-theme="light"] .mob-menu{background:#f0ede4;border-color:rgba(249,115,22,0.2);}
+[data-theme="light"] .form-ctrl{color:#1a0f2e;background:rgba(0,0,0,0.04);border-color:rgba(249,115,22,0.2);}
+[data-theme="light"] .form-ctrl:focus{border-color:var(--accent-gold);}
+[data-theme="light"] .srch-input{color:#1a0f2e;background:rgba(0,0,0,0.06);border-color:rgba(249,115,22,0.2);}
+[data-theme="light"] .srch-input:focus{border-color:var(--accent-gold);}
+[data-theme="light"] .stat-num{color:#1a0f2e;}
+[data-theme="light"] .vm-card:last-child{background:#fff;border-color:rgba(249,115,22,0.1);}
+[data-theme="light"] .vm-icon{background:linear-gradient(135deg,var(--accent-gold),#dc2626);}
+[data-theme="light"] .feat-icon{background:linear-gradient(135deg,var(--accent-gold),#dc2626);}
+[data-theme="light"] .feat-title{color:#1a0f2e;}
+[data-theme="light"] .feat-sub{color:var(--accent-gold);}
+[data-theme="light"] .feats-strip{background:linear-gradient(135deg,#ffffff,#f0ede4);border-color:var(--accent-gold);}
+[data-theme="light"] .premium-features{background:linear-gradient(135deg,#ffffff,#f0ede4);}
+[data-theme="light"] .premium-features::after{background:linear-gradient(135deg,rgba(250,248,243,0.95),rgba(240,237,228,0.92));}
+[data-theme="light"] .premium-card{background:rgba(255,255,255,0.8);border-color:rgba(249,115,22,0.2);}
+[data-theme="light"] .premium-card h3{color:#1a0f2e;}
+[data-theme="light"] .premium-card p{color:#4a4060;}
+[data-theme="light"] .premium-features-list li{color:#4a4060;}
+[data-theme="light"] .prod-card{background:rgba(255,255,255,0.8);border-color:rgba(249,115,22,0.15);}
+[data-theme="light"] .prod-info h3{color:#1a0f2e;}
+[data-theme="light"] .prod-info p{color:#4a4060;}
+[data-theme="light"] .t-card2{background:rgba(255,255,255,0.8);border-color:rgba(249,115,22,0.15);}
+[data-theme="light"] .t-text{color:#4a4060;}
+[data-theme="light"] .t-name{color:#1a0f2e;}
+[data-theme="light"] .t-role{color:var(--accent-gold);}
+[data-theme="light"] .cbox{background:rgba(255,255,255,0.8);border-color:rgba(249,115,22,0.15);}
+[data-theme="light"] .cbox h3{color:#1a0f2e;}
+[data-theme="light"] .c-val{color:#4a4060;}
+[data-theme="light"] .c-val a{color:#4a4060;}
+[data-theme="light"] .c-val a:hover{color:var(--accent-gold);}
+[data-theme="light"] .stat-card{background:rgba(255,255,255,0.8);border-color:rgba(249,115,22,0.15);}
+[data-theme="light"] .stat-lbl{color:var(--accent-gold);}
+[data-theme="light"] .soc-btn:hover{border-color:var(--accent-gold);color:var(--accent-gold);}
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <img src="logo.png" alt="سحر العطور" class="ld-logo">
+  <div class="ld-bar"><div class="ld-fill"></div></div>
+  <span class="ld-text">MAGIC PERFUMES</span>
+</div>
+
+<!-- PROGRESS -->
+<div id="progress"></div>
+
+<!-- SEARCH PANEL -->
+<div id="searchPanel" class="search-panel">
+  <div class="srch-inner">
+    <input type="text" id="searchInput" class="srch-input" placeholder="ابحث عن عطر، مجموعة، منتج..." autocomplete="off">
+    <button class="srch-close" id="searchClose"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="srch-results" id="searchResults"></div>
+</div>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="hdr-inner">
+    <a href="#home" class="logo-wrap"><img src="logo2.png" alt="سحر العطور" id="headerLogo"></a>
+    <nav class="main-nav">
+      <a href="#home" class="nav-a active">الرئيسية</a>
+      <a href="#story" class="nav-a">قصتنا</a>
+      <a href="#vision-mission" class="nav-a">الرؤية</a>
+      <div class="dropdown">
+        <a href="#products" class="nav-a">منتجاتنا <i class="fas fa-chevron-down" style="font-size:0.65rem;"></i></a>
+        <div class="dd-menu">
+          <a href="#products" data-cat="niche"><i class="fas fa-gem"></i>العطور النيش</a>
+          <a href="#products" data-cat="east-west"><i class="fas fa-globe-africa"></i>فرنسية وشرقية</a>
+          <a href="#products" data-cat="home"><i class="fas fa-home"></i>معطرات المنزل</a>
+          <a href="#products" data-cat="oud"><i class="fas fa-fire"></i>الدخون والعود</a>
+          <a href="#products" data-cat="body"><i class="fas fa-spa"></i>العناية بالجسم</a>
+          <a href="#products" data-cat="gift"><i class="fas fa-gift"></i>مجموعات الهدايا</a>
+        </div>
+      </div>
+      <a href="#excellence" class="nav-a">التميز</a>
+      <a href="#community" class="nav-a">مجتمعنا</a>
+      <a href="#contact" class="nav-a">اتصل بنا</a>
+    </nav>
+    <div class="hdr-icons">
+      <button id="themeBtn" class="hdr-btn" title="تغيير الوضع"><i class="fas fa-moon"></i></button>
+      <button id="searchBtn" class="hdr-btn" title="البحث"><i class="fas fa-search"></i></button>
+      <a href="https://wa.me/201146172767" target="_blank" rel="noopener" class="hdr-btn" title="واتساب" data-desk><i class="fab fa-whatsapp" style="color:#25d366;"></i></a>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobMenu" class="mob-menu">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.2rem;">
+    <img src="logo.png" alt="Logo" style="height:48px;">
+    <button id="mobClose" style="background:none;border:none;color:var(--navy-light);font-size:1.8rem;cursor:pointer;line-height:1;">×</button>
+  </div>
+  <a href="#home" class="mob-a">الرئيسية</a>
+  <a href="#story" class="mob-a">قصتنا</a>
+  <a href="#vision-mission" class="mob-a">الرؤية والرسالة</a>
+  <a href="#products" class="mob-a">منتجاتنا</a>
+  <a href="#excellence" class="mob-a">عناصر التميز</a>
+  <a href="#community" class="mob-a">مجتمعنا</a>
+  <a href="#contact" class="mob-a">اتصل بنا</a>
+  <div style="margin-top:1rem;">
+    <button id="themeMob" class="hdr-btn" style="width:100%;border-radius:10px;gap:0.7rem;font-size:0.9rem;font-weight:600;justify-content:center;">
+      <i class="fas fa-moon"></i> تغيير الوضع
+    </button>
+  </div>
+</div>
+<div id="overlay" class="overlay"></div>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="particles-wrap" id="particles"></div>
+  <div class="hero-grid">
+    <div class="hero-text">
+      <div class="hero-badge"><i class="fas fa-star" style="font-size:0.7rem;"></i> علامة تجارية فاخرة • جودة استثنائية</div>
+      <h1 class="hero-title">سحر العطور</h1>
+      <div class="hero-sub">SAHAR AL-OTOUR</div>
+      <p class="hero-desc">جاذبية لا تُقاوم.. وذاكرة لا تنسى — عطورٌ صُممت لتحاكي مشاعرك، ومنتجات عناية فائقة الجودة ننتقي مكوناتها من قلب الطبيعة ومن أرقى المصادر العالمية.. لتكون رفيقك في أجمل لحظاتك.</p>
+      <div class="hero-btns">
+        <a href="#products" class="btn-g"><i class="fas fa-gem"></i> استكشف مجموعتنا</a>
+        <a href="https://wa.me/201146172767?text=مرحباً، أريد الاستفسار عن منتجاتكم" target="_blank" class="btn-o"><i class="fab fa-whatsapp"></i> اطلب الآن</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="bottle-wrap">
+        <div class="bottle-glow"></div>
+        <svg viewBox="0 0 220 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;filter:drop-shadow(0 20px 60px rgba(26,35,126,0.45));">
+          <defs>
+            <linearGradient id="gG" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#0d114a"/><stop offset="45%" stop-color="#1a237e"/><stop offset="100%" stop-color="#3f51b5"/>
+            </linearGradient>
+            <linearGradient id="gGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="rgba(26,35,126,0.18)"/><stop offset="100%" stop-color="rgba(26,35,126,0.25)"/>
+            </linearGradient>
+          </defs>
+          <rect x="95" y="8" width="30" height="10" rx="4" fill="url(#gG)"/>
+          <rect x="89" y="17" width="42" height="14" rx="5" fill="url(#gG)"/>
+          <rect x="78" y="28" width="64" height="52" rx="8" fill="url(#gG)" opacity="0.9"/>
+          <rect x="82" y="32" width="56" height="44" rx="6" fill="rgba(255,255,255,0.08)"/>
+          <rect x="85" y="78" width="50" height="28" rx="5" fill="url(#gG)" opacity="0.85"/>
+          <rect x="35" y="103" width="150" height="200" rx="22" fill="url(#gGlass)" stroke="url(#gG)" stroke-width="1.5"/>
+          <rect x="37" y="163" width="146" height="138" rx="20" fill="rgba(26,35,126,0.18)">
+            <animate attributeName="y" values="163;158;163" dur="3.5s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="55" y="126" width="110" height="98" rx="12" fill="rgba(26,35,126,0.08)" stroke="rgba(26,35,126,0.28)" stroke-width="1"/>
+          <text x="72" y="148" fill="url(#gG)" font-size="9">✦</text>
+          <text x="139" y="148" fill="url(#gG)" font-size="7">✦</text>
+          <text x="110" y="142" fill="url(#gG)" font-size="6">✦</text>
+          <text x="110" y="178" text-anchor="middle" fill="url(#gG)" font-size="12" font-family="Tajawal,sans-serif" font-weight="700">سحر العطور</text>
+          <text x="110" y="197" text-anchor="middle" fill="rgba(26,35,126,0.6)" font-size="7" letter-spacing="2" font-family="serif">MAGIC PERFUMES</text>
+          <rect x="44" y="108" width="8" height="190" rx="4" fill="rgba(255,255,255,0.07)"/>
+          <rect x="134" y="86" width="40" height="9" rx="5" fill="url(#gG)"/>
+          <circle cx="178" cy="81" r="3.5" fill="rgba(26,35,126,0.85)" opacity="0">
+            <animate attributeName="opacity" values="0;0.9;0" dur="2.2s" begin="0s" repeatCount="indefinite"/>
+            <animate attributeName="cx" values="178;200;222" dur="2.2s" begin="0s" repeatCount="indefinite"/>
+            <animate attributeName="cy" values="81;62;46" dur="2.2s" begin="0s" repeatCount="indefinite"/>
+            <animate attributeName="r" values="3.5;2;0.8" dur="2.2s" begin="0s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="178" cy="81" r="2.5" fill="rgba(63,81,181,0.75)" opacity="0">
+            <animate attributeName="opacity" values="0;0.8;0" dur="2.2s" begin="0.4s" repeatCount="indefinite"/>
+            <animate attributeName="cx" values="178;206;234" dur="2.2s" begin="0.4s" repeatCount="indefinite"/>
+            <animate attributeName="cy" values="81;57;38" dur="2.2s" begin="0.4s" repeatCount="indefinite"/>
+            <animate attributeName="r" values="2.5;1.5;0.5" dur="2.2s" begin="0.4s" repeatCount="indefinite"/>
+          </circle>
+        </svg>
+        <div style="position:absolute;top:8%;left:-25%;opacity:0.5;animation:fe 4s ease-in-out infinite;font-size:0.8rem;color:var(--navy-light);"><i class="fas fa-star"></i></div>
+        <div style="position:absolute;top:35%;right:-18%;opacity:0.4;animation:fe 3.2s ease-in-out 1s infinite;font-size:1rem;color:var(--navy-light);"><i class="fas fa-sparkles"></i></div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-ind"><i class="fas fa-chevron-down"></i><span>للأسفل</span></div>
+</section>
+<style>@keyframes fe{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-12px) rotate(10deg);}}</style>
+
+<!-- FEATURES STRIP -->
+<div class="feats-strip">
+  <div class="feats-inner">
+    <div class="feat-item"><div class="feat-icon"><i class="fas fa-clock"></i></div><div><div class="feat-title">ثبات 48+ ساعة</div><div class="feat-sub">مثبتات عطرية طبيعية</div></div></div>
+    <div class="feat-item"><div class="feat-icon"><i class="fas fa-leaf"></i></div><div><div class="feat-title">مكونات طبيعية</div><div class="feat-sub">آمنة 100% على البشرة</div></div></div>
+    <div class="feat-item"><div class="feat-icon"><i class="fab fa-whatsapp"></i></div><div><div class="feat-title">طلب عبر واتساب</div><div class="feat-sub">توصيل سريع لبابك</div></div></div>
+    <div class="feat-item"><div class="feat-icon"><i class="fas fa-gem"></i></div><div><div class="feat-title">تغليف فاخر</div><div class="feat-sub">مثالي لأجمل الهدايا</div></div></div>
+  </div>
+</div>
+
+<!-- STORY - With Background Image -->
+<section id="story" class="sec-pad">
+  <div class="container container-story">
+    <div class="sec-title fade-up">
+      <h2><i class="fas fa-feather-alt"></i> قصة العلامة</h2>
+      <span class="gold-bar"></span>
+      <p>رحلة شغف بدأت بحلم، وتحولت إلى توقيع عطري يعبّر عن الهوية</p>
+    </div>
+    <div class="timeline">
+      <div class="t-item">
+        <div class="t-card fade-right"><h3><i class="fas fa-seedling" style="margin-left:0.5rem;"></i>البداية</h3><p>وُلدت سحر العطور من شغف عميق بفن المزج العطري. أردنا تحويل الذكريات والمشاعر إلى جزيئات عطرية تسحر الحواس — لم نرد مجرد بيع زجاجات، بل صياغة توقيع شخصي لكل من يبحث عن التفرد.</p></div>
+        <div class="t-dot fade-scale">١</div>
+        <div class="t-empty"></div>
+      </div>
+      <div class="t-item">
+        <div class="t-empty"></div>
+        <div class="t-dot fade-scale d1">٢</div>
+        <div class="t-card fade-left d1"><h3><i class="fas fa-eye" style="margin-left:0.5rem;"></i>الرؤية</h3><p>دمجنا أصالة الشرق بسحر الغرب لنقدم مفهوماً متطوراً في صناعة العطور الفاخرة. نؤمن أن العطر هو اللغة غير المرئية التي تعبّر عن شخصيتك قبل أن تتكلم.</p></div>
+      </div>
+      <div class="t-item">
+        <div class="t-card fade-right d2"><h3><i class="fas fa-crown" style="margin-left:0.5rem;"></i>اليوم</h3><p>أصبحنا الخيار الأول لعشاق الفخامة في المملكة والخليج، مع مجموعة استثنائية تجمع بين الأصالة والابتكار وأعلى معايير النقاء والإتقان.</p></div>
+        <div class="t-dot fade-scale d2">٣</div>
+        <div class="t-empty"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISION MISSION -->
+<section id="vision-mission" class="sec-pad" style="background:var(--dark);">
+  <div class="container">
+    <div class="sec-title fade-up">
+      <h2><i class="fas fa-eye"></i> الرؤية والرسالة</h2>
+      <span class="gold-bar"></span>
+    </div>
+    <div class="vm-wrap fade-scale">
+      <div class="vm-card">
+        <div class="vm-icon"><i class="fas fa-eye"></i></div>
+        <h3>رؤيتنا</h3>
+        <p>أن نصبح الاسم الأول والرائد في عالم العطور الفاخرة على مستوى المملكة والخليج، وأن ترتبط علامتنا التجارية بالجودة العالمية والابتكار المستمر في فنون العطارة الحديثة.</p>
+      </div>
+      <div class="vm-card">
+        <div class="vm-icon"><i class="fas fa-bullseye"></i></div>
+        <h3>رسالتنا</h3>
+        <p>تقديم تشكيلة استثنائية من العطور والمنتجات العطرية التي تعزز الثقة بالنفس وتضفي لمسة من السحر والجمال على حياة عملائنا، مع الالتزام بأعلى معايير النقاء والإتقان.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GOALS -->
+<section id="goals" class="sec-pad">
+  <div class="goals-bg"></div>
+  <div class="container">
+    <div class="sec-title fade-up">
+      <h2 style="color:#fff;"><i class="fas fa-chart-line"></i> أهدافنا وطموحاتنا</h2>
+      <span class="gold-bar"></span>
+    </div>
+    <div class="goals-grid">
+      <div class="goal-card fade-scale"><div class="goal-num">01</div><div class="goal-icon"><i class="fas fa-store"></i></div><div class="goal-lbl">الريادة السوقية</div><div class="goal-sub">التوسع بكبرى المدن</div></div>
+      <div class="goal-card fade-scale d1"><div class="goal-num">02</div><div class="goal-icon"><i class="fas fa-paint-brush"></i></div><div class="goal-lbl">التنوع الإبداعي</div><div class="goal-sub">مجموعات حصرية</div></div>
+      <div class="goal-card fade-scale d2"><div class="goal-num">03</div><div class="goal-icon"><i class="fas fa-heart"></i></div><div class="goal-lbl">خدمة العملاء</div><div class="goal-sub">استشارات عطرية</div></div>
+      <div class="goal-card fade-scale d3"><div class="goal-num">04</div><div class="goal-icon"><i class="fas fa-mobile-alt"></i></div><div class="goal-lbl">التجارة الرقمية</div><div class="goal-sub">تسوق سلس بلا حدود</div></div>
+      <div class="goal-card fade-scale d4"><div class="goal-num">05</div><div class="goal-icon"><i class="fas fa-shield-alt"></i></div><div class="goal-lbl">الجودة والسلامة</div><div class="goal-sub">زيوت طبيعية وآمنة</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PREMIUM FEATURES - NEW SECTION -->
+<section class="premium-features sec-pad">
+  <div class="container">
+    <div class="sec-title fade-up">
+      <h2><i class="fas fa-crown"></i> مزايانا المميزة</h2>
+      <span class="gold-bar"></span>
+      <p>لماذا نتميز؟ لأننا نقدم تجربة عطرية لا مثيل لها</p>
+    </div>
+    <div class="premium-grid">
+      <div class="premium-card fade-scale">
+        <div class="premium-icon"><i class="fas fa-award"></i></div>
+        <h3>ضمان الجودة المطلقة</h3>
+        <p>نلتزم بأعلى معايير الجودة العالمية مع شهادات الجودة الدولية وضمان 100% على جميع منتجاتنا.</p>
+        <ul class="premium-features-list">
+          <li><i class="fas fa-check"></i> شهادات جودة عالمية</li>
+          <li><i class="fas fa-check"></i> ضمان استعادة المبلغ</li>
+          <li><i class="fas fa-check"></i> فحص جودة قبل الشحن</li>
+        </ul>
+      </div>
+      <div class="premium-card fade-scale d1">
+        <div class="premium-icon"><i class="fas fa-shipping-fast"></i></div>
+        <h3>توصيل فائق السرعة</h3>
+        <p>خدمة توصيل سريعة ومضمونة لجميع أنحاء المملكة والخليج مع تتبع شحنات مباشر.</p>
+        <ul class="premium-features-list">
+          <li><i class="fas fa-check"></i> توصيل خلال 24 ساعة</li>
+          <li><i class="fas fa-check"></i> تتبع الشحنة مباشر</li>
+          <li><i class="fas fa-check"></i> تغليف آمن ومميز</li>
+        </ul>
+      </div>
+      <div class="premium-card fade-scale d2">
+        <div class="premium-icon"><i class="fas fa-users"></i></div>
+        <h3>خدمة عملاء متميزة</h3>
+        <p>فريق من الخبراء المتخصصين في العطور لتقديم استشارات شخصية وخدمة عملاء على مدار الساعة.</p>
+        <ul class="premium-features-list">
+          <li><i class="fas fa-check"></i> استشارات عطرية مجانية</li>
+          <li><i class="fas fa-check"></i> خدمة عملاء 24/7</li>
+          <li><i class="fas fa-check"></i> عينات مجانية مع كل طلب</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROFESSIONAL SERVICES - Luxury Design -->
+<section class="professional-services sec-pad">
+  <div class="container">
+    <div class="sec-title fade-up">
+      <h2><i class="fas fa-concierge-bell"></i> خدماتنا الاحترافية</h2>
+      <span class="gold-bar"></span>
+      <p>تجاوزنا تقديم المنتجات لنقدم تجربة عطرية متكاملة</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-scale">
+        <div class="service-icon"><i class="fas fa-magic"></i></div>
+        <h3>تصميم عطور شخصية</h3>
+        <p>نعمل معك لتصميم عطور فريدة تعبر عن شخصيتك وتناسب مناسباتك الخاصة.</p>
+        <ul>
+          <li><i class="fas fa-star"></i> استشارة شخصية مجانية</li>
+          <li><i class="fas fa-star"></i> اختيار من 50+ نوتة عطرية</li>
+          <li><i class="fas fa-star"></i> تغليف هدية مميز</li>
+        </ul>
+        <a href="https://wa.me/201146172767?text=مرحباً سحر العطور، أود الاستفسار عن تصميم عطور شخصية" target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i><span>اطلب استشارة مجانية</span></a>
+      </div>
+      
+      <div class="service-card fade-scale d1">
+        <div class="service-icon"><i class="fas fa-gift"></i></div>
+        <h3>هدايا الشركات والمناسبات</h3>
+        <p>حلول هدايا متكاملة للشركات والفعاليات مع إمكانية إضافة الشعار والرسالة الخاصة.</p>
+        <ul>
+          <li><i class="fas fa-star"></i> تخفيضات خاصة للكميات</li>
+          <li><i class="fas fa-star"></i> تغليف مخصص بالشعار</li>
+          <li><i class="fas fa-star"></i> بطاقات معايدة مخصصة</li>
+        </ul>
+        <a href="https://wa.me/201146172767?text=مرحباً سحر العطور، أود الاستفسار عن هدايا الشركات والمناسبات" target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i><span>اطلب عرض سعر</span></a>
+      </div>
+      
+      <div class="service-card fade-scale d2">
+        <div class="service-icon"><i class="fas fa-graduation-cap"></i></div>
+        <h3>ورش عمل عطرية</h3>
+        <p>ورش عمل تفاعلية لتعليم فن العطارة وصناعة العطور الشخصية.</p>
+        <ul>
+          <li><i class="fas fa-star"></i> مدربون متخصصون</li>
+          <li><i class="fas fa-star"></i> مواد خام عالمية</li>
+          <li><i class="fas fa-star"></i> شهادة إتمام</li>
+        </ul>
+        <a href="https://wa.me/201146172767?text=مرحباً سحر العطور، أود الاستفسار عن ورش عمل عطرية" target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i><span>احجز مكانك الآن</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="sec-pad">
+  <div class="container">
+    <div class="sec-title fade-up">
+      <h2><i class="fas fa-box-open"></i> قطاعات ومنتجاتنا</h2>
+      <span class="gold-bar"></span>
+      <p>اكتشف مجموعتنا الاستثنائية — كل منتج يحكي قصة عطرية فريدة</p>
+    </div>
+    <div class="filters fade-up">
+      <button class="f-btn on" data-f="all">الكل</button>
+      <button class="f-btn" data-f="niche">العطور النيش</button>
+      <button class="f-btn" data-f="east-west">فرنسية وشرقية</button>
+      <button class="f-btn" data-f="home">معطرات المنزل</button>
+      <button class="f-btn" data-f="oud">دخون وعود</button>
+      <button class="f-btn" data-f="body">العناية بالجسم</button>
+      <button class="f-btn" data-f="gift">الهدايا</button>
+    </div>
+    <div class="prod-grid" id="prodGrid">
+      <div class="prod-card fade-scale" data-cat="niche">
+        <div class="prod-img"><img src="pr1.png" alt="العطور النيش" loading="lazy"><div class="prod-badge">النيش الخاص</div></div>
+        <div class="prod-info"><div class="prod-icon"><i class="fas fa-gem"></i></div><h3>العطور النيش (Private Collection)</h3><p>عطور صُممت لصفوة القوم بمكونات نادرة: العود المعتق، العنبر الرمادي، وورد طائفي فاخر. تركيزات Extrait de Parfum استثنائية.</p><a href="https://wa.me/201146172767?text=مرحباً سحر العطور، أود الاستفسار عن: العطور النيش - Private Collection" target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i><span>اطلب عبر واتساب</span></a></div>
+      </div>
+      <div class="prod-card fade-scale d1" data-cat="east-west">
+        <div class="prod-img"><img src="pr2.png" alt="العطور الفرنسية" loading="lazy"><div class="prod-badge">فرنسي • شرقي</div></div>
+        <div class="prod-info"><div class="prod-icon"><i class="fas fa-globe-africa"></i></div><h3>العطور الفرنسية والشرقية</h3><p>مزيج ساحر يجمع بين حداثة الغرب — المسك، الياسمين، الفانيليا — وعراقة الشرق: الزعفران والصندل والمسك الأبيض.</p><a href="https://wa.me/201146172767?text=مرحباً سحر العطور، أود الاستفسار عن: العطور الفرنسية والشرقية" target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i><span>اطلب عبر واتساب</span></a></div>
+      </div>
+      <div class="prod-card fade-scale d2" data-cat="home">
+        <div class="prod-img"><img src="pr3.png" alt="معطرات المنزل" loading="lazy"><div class="prod-badge">المنزل</div></div>
+        <div class="prod-info"><div class="prod-icon"><i class="fas fa-home"></i></div><h3>معطرات المنزل والأجواء</h3><p>بخاخات، شموع عطرية، وزيوت فواحة تمنح منزلك هوية خاصة مريحة للأعصاب وتعكس ذوقك الرفيع.</p><a href="https://wa.me/201146172767?text=مرحباً سحر العطور، أود الاستفسار عن: معطرات المنزل والأجواء" target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i><span>اطلب عبر واتساب</span></a></div>
+      </div>
+      <div class="prod-card fade-scale d3" data-cat="oud">
+        <div class="prod-img"><img src="pr4.png" alt="الدخون والعود" loading="lazy"><div class="prod-badge">عود • دخون</div></div>
+        <div class="prod-info"><div class="prod-icon"><i class="fas fa-fire"></i></div><h3>الدخون والعود الملكي</h3><p>تشكيلة من أجود أنواع خشب العود الطبيعي والمبثوث والدخون المطور الذي يفوح بأصالة الضيافة العربية الأصيلة.</p><a href="https://wa.me/201146172767?text=مرحباً سحر العطور، أود الاستفسار عن: الدخون والعود الملكي" target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i><span>اطلب عبر واتساب</span></a></div>
+      </div>
+      <div class="prod-card fade-scale" data-cat="body">
+        <div class="prod-img"><img src="sor3.jpg" alt="العناية بالجسم" loading="lazy"><div class="prod-badge">عناية فائقة</div></div>
+        <div class="prod-info"><div class="prod-icon"><i class="fas fa-spa"></i></div><h3>العناية بالجسم</h3><p>زيوت عطرية للجسم، لوشنات مخملية، ومعطرات شعر غنية بالفيتامينات والمواد المرطبة لنعومة دائمة.</p><a href="https://wa.me/201146172767?text=مرحباً سحر العطور، أود الاستفسار عن: منتجات العناية بالجسم" target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i><span>اطلب عبر واتساب</span></a></div>
+      </div>
+      <div class="prod-card fade-scale d1" data-cat="gift">
+        <div class="prod-img"><img src="sor4.jpg" alt="الهدايا" loading="lazy"><div class="prod-badge">هدايا فاخرة</div></div>
+        <div class="prod-info"><div class="prod-icon"><i class="fas fa-gift"></i></div><h3>مجموعات الهدايا الفاخرة</h3><p>صناديق فاخرة مصممة بعناية للزفاف، التخرج، والمناسبات الخاصة مع إمكانية التخصيص والإهداء.</p><a href="https://wa.me/201146172767?text=مرحباً سحر العطور، أود الاستفسار عن: مجموعات الهدايا الفاخرة" target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i><span>اطلب عبر واتساب</span></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXCELLENCE - With Background Image -->
+<section id="excellence" class="sec-pad">
+  <div class="container container-ex">
+    <div class="sec-title fade-up">
+      <h2><i class="fas fa-star"></i> عناصر التميز</h2>
+      <span class="gold-bar"></span>
+      <p>لماذا سحر العطور؟ لأن كل تفصيلة تُصنع بحب واحترافية لا حدود لها</p>
+    </div>
+    <div class="ex-grid">
+      <div class="ex-card fade-right">
+        <img src="sor2.jpg" alt="الثبات الفائق">
+        <div class="ex-overlay"></div>
+        <div class="ex-content">
+          <div class="ex-icon"><i class="fas fa-fingerprint"></i></div>
+          <h4>الثبات الفائق</h4>
+          <p>مثبتات عطرية طبيعية تضمن بقاء الرائحة أكثر من 48 ساعة متواصلة</p>
+        </div>
+      </div>
+      <div class="ex-card fade-left">
+        <img src="sor1.jpg" alt="التصميم الأنيق">
+        <div class="ex-overlay"></div>
+        <div class="ex-content">
+          <div class="ex-icon"><i class="fas fa-wine-bottle"></i></div>
+          <h4>التصميم الأنيق</h4>
+          <p>زجاجات تحف فنية تزين طاولة زينتكم بأناقة استثنائية</p>
+        </div>
+      </div>
+      <div class="ex-card fade-left d1">
+        <img src="sor5.jpg" alt="فريق الخبراء">
+        <div class="ex-overlay"></div>
+        <div class="ex-content">
+          <div class="ex-icon"><i class="fas fa-user-tie"></i></div>
+          <h4>فريق من الخبراء</h4>
+          <p>عطارون محترفون يوازنون النوتات العطرية بدقة متناهية</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats" class="sec-pad">
+  <div class="stats-bg"></div>
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card fade-scale"><div class="stat-ic"><i class="fas fa-flask"></i></div><div class="stat-num" data-t="200">0</div><div class="stat-lbl">منتج حصري</div></div>
+      <div class="stat-card fade-scale d1"><div class="stat-ic"><i class="fas fa-calendar-alt"></i></div><div class="stat-num" data-t="15">0</div><div class="stat-lbl">عاماً من الخبرة</div></div>
+      <div class="stat-card fade-scale d2"><div class="stat-ic"><i class="fas fa-users"></i></div><div class="stat-num" data-t="10000">0</div><div class="stat-lbl">عميل سعيد</div></div>
+      <div class="stat-card fade-scale d3"><div class="stat-ic"><i class="fas fa-store-alt"></i></div><div class="stat-num" data-t="8">0</div><div class="stat-lbl">فرع حول المملكة</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section id="community" class="sec-pad" style="background:var(--dark);">
+  <div class="container">
+    <div class="sec-title fade-up">
+      <h2><i class="fas fa-users"></i> مجتمع سحر العطور</h2>
+      <span class="gold-bar"></span>
+      <p>آراء عملائنا أجمل شهادة على جودة ما نقدم وأصالة ما نصنع</p>
+    </div>
+    <div class="testi-grid">
+      <div class="t-card2 fade-scale"><div class="t-stars">★★★★★</div><p class="t-text">"أجمل عطر نيش جربته في حياتي، ثبات رهيب وفوحان يسحر الحواس. فعلاً توقيع شخصي لا مثيل له."</p><div class="t-author"><div class="t-avatar">أ.ع</div><div><div class="t-name">أحمد العتيبي</div><div class="t-role">عميل متميز ✓</div></div></div></div>
+      <div class="t-card2 fade-scale d1"><div class="t-stars">★★★★★</div><p class="t-text">"التغليف الفاخر والرائحة الملكية، سحر العطور أصبحت خياري الأول لجميع مناسباتي الخاصة."</p><div class="t-author"><div class="t-avatar">ن.ق</div><div><div class="t-name">نورة القحطاني</div><div class="t-role">عميلة مخلصة ✓</div></div></div></div>
+      <div class="t-card2 fade-scale d2"><div class="t-stars">★★★★★</div><p class="t-text">"خدمة راقية ومنتجات أصلية 100%، أنصح بها بشدة لكل عاشق للعود والأصالة العربية."</p><div class="t-author"><div class="t-avatar">خ.ش</div><div><div class="t-name">خالد الشمري</div><div class="t-role">عاشق العود ✓</div></div></div></div>
+      <div class="t-card2 fade-scale d3"><div class="t-stars">★★★★★</div><p class="t-text">"زجاجة العطر تحفة فنية بحد ذاتها، والرائحة تدوم أياماً على الملابس بشكل لا يصدق."</p><div class="t-author"><div class="t-avatar">ل.ع</div><div><div class="t-name">ليلى العمري</div><div class="t-role">عاشقة الفخامة ✓</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CEO QUOTE -->
+<section id="ceo" class="sec-pad" style="position:relative;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(26,35,126,0.05) 0%,transparent 70%);pointer-events:none;"></div>
+  <div class="container">
+    <div class="ceo-inner fade-scale">
+      <i class="fas fa-quote-right" style="font-size:2.8rem;color:var(--navy-light);opacity:0.4;display:block;margin-bottom:1.5rem;"></i>
+      <p class="ceo-quote-text">"إن صناعة العطر بالنسبة لنا ليست مجرد مهنة، بل هي رسالة حب وتقدير لكل عميل. في سحر العطور، قطعنا عهداً على أنفسنا ألا نقدم إلا ما يفخر به عملاؤنا، مستعينين بأحدث التقنيات العالمية في التصنيع مع الحفاظ على روح الأصالة التي تميزنا."</p>
+      <div style="width:45px;height:2px;background:var(--navy-light);margin:0 auto 1rem;border-radius:2px;"></div>
+      <div class="ceo-name">— المؤسس: محمد عاطف</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="sec-pad">
+  <div class="container">
+    <div class="sec-title fade-up">
+      <h2><i class="fas fa-phone-alt"></i> تواصلوا مع السحر</h2>
+      <span class="gold-bar"></span>
+      <p>نحن دائماً بالقرب منكم لتقديم أفضل تجربة عطرية ممكنة</p>
+    </div>
+    <div class="contact-grid">
+      <div class="cbox fade-right">
+        <h3>معلومات التواصل</h3>
+        <div class="c-row"><div class="c-icon"><i class="fas fa-map-marker-alt"></i></div><div class="c-val">المملكة العربية السعودية</div></div>
+        <div class="c-row"><div class="c-icon"><i class="fas fa-phone"></i></div><div class="c-val"><a href="tel:+201146172767" dir="ltr">+201146172767</a></div></div>
+        <div class="c-row"><div class="c-icon"><i class="fas fa-envelope"></i></div><div class="c-val"><a href="mailto:sales@magiperfumes.com">sales@magiperfumes.com</a></div></div>
+        <div class="c-row"><div class="c-icon"><i class="fas fa-globe"></i></div><div class="c-val">www.magicperfumes.com</div></div>
+        <div class="c-row"><div class="c-icon"><i class="fas fa-hashtag"></i></div><div class="c-val">@MagicPerfumes</div></div>
+        <button class="wa-big" onclick="window.open('https://wa.me/201146172767?text=مرحباً، أريد الاستفسار عن منتجاتكم','_blank')">
+          <i class="fab fa-whatsapp" style="font-size:1.3rem;"></i> تواصل عبر واتساب الآن
+        </button>
+      </div>
+      <div class="cbox fade-left">
+        <h3>أرسل لنا رسالة</h3>
+        <input type="text" class="form-ctrl" id="fName" placeholder="الاسم الكريم">
+        <input type="email" class="form-ctrl" id="fEmail" placeholder="البريد الإلكتروني">
+        <input type="text" class="form-ctrl" id="fSubj" placeholder="الموضوع">
+        <textarea class="form-ctrl" id="fMsg" placeholder="رسالتك..."></textarea>
+        <button class="btn-send" onclick="sendForm()">إرسال الرسالة &nbsp;<i class="fas fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-main">
+      <div>
+        <div class="foot-logo"><img src="logo.png" alt="سحر العطور"></div>
+        <p class="foot-tag">سحر العطور... حيث تبدأ الحكاية برشة عطر. عطورٌ صُممت لتحاكي مشاعرك وتكون رفيقك في أجمل لحظاتك.</p>
+        <div class="social-row">
+          <a href="#" class="soc-btn"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="soc-btn"><i class="fab fa-snapchat"></i></a>
+          <a href="#" class="soc-btn"><i class="fab fa-tiktok"></i></a>
+          <a href="https://wa.me/201146172767" target="_blank" class="soc-btn"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li><a href="#home">الرئيسية</a></li>
+          <li><a href="#story">قصتنا</a></li>
+          <li><a href="#vision-mission">الرؤية والرسالة</a></li>
+          <li><a href="#products">منتجاتنا</a></li>
+          <li><a href="#excellence">عناصر التميز</a></li>
+          <li><a href="#community">مجتمعنا</a></li>
+          <li><a href="#contact">اتصل بنا</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>أقسام المنتجات</h4>
+        <ul>
+          <li><a href="#products">العطور النيش</a></li>
+          <li><a href="#products">العطور الفرنسية والشرقية</a></li>
+          <li><a href="#products">معطرات المنزل</a></li>
+          <li><a href="#products">الدخون والعود</a></li>
+          <li><a href="#products">العناية بالجسم</a></li>
+          <li><a href="#products">مجموعات الهدايا</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <div class="container">
+      © 2026 SAHAR AL-OTOUR. جميع الحقوق محفوظة. | تصميم وتطوير
+      <a href="https://www.facebook.com/MoahamedAtefofficial" target="_blank">MohamedAtef</a>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<a href="https://wa.me/201146172767?text=مرحباً، أريد الاستفسار عن منتجاتكم" target="_blank" class="wa-float"><i class="fab fa-whatsapp"></i></a>
+<a href="tel:+201146172767" class="phone-float"><i class="fas fa-phone"></i></a>
+<button class="top-btn" id="topBtn"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+(function(){
+  window.addEventListener('load',()=>setTimeout(()=>document.getElementById('loader').classList.add('gone'),2000));
+
+  const prg=document.getElementById('progress');
+  window.addEventListener('scroll',()=>{const s=document.documentElement.scrollTop,h=document.documentElement.scrollHeight-document.documentElement.clientHeight;prg.style.width=(s/h*100)+'%';});
+
+  const hdr=document.getElementById('header');
+  window.addEventListener('scroll',()=>hdr.classList.toggle('scrolled',window.scrollY>60));
+
+  const mob=document.getElementById('mobMenu'),ovl=document.getElementById('overlay');
+  function openMob(){mob.classList.add('open');ovl.classList.add('show');document.body.style.overflow='hidden';}
+  function closeMob(){mob.classList.remove('open');ovl.classList.remove('show');document.body.style.overflow='';}
+  document.getElementById('hamburger').addEventListener('click',openMob);
+  document.getElementById('mobClose').addEventListener('click',closeMob);
+  ovl.addEventListener('click',closeMob);
+  document.querySelectorAll('.mob-a').forEach(a=>a.addEventListener('click',closeMob));
+
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',function(e){
+      const h=this.getAttribute('href');
+      if(h&&h.length>1){const t=document.querySelector(h);if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-hdr.offsetHeight,behavior:'smooth'});}}
+    });
+  });
+
+  const html=document.documentElement;
+  function setTheme(t){html.setAttribute('data-theme',t);localStorage.setItem('theme',t);const icon=t==='dark'?'fa-sun':'fa-moon';document.querySelectorAll('#themeBtn i,#themeMob i').forEach(i=>i.className='fas '+icon);}
+  setTheme(localStorage.getItem('theme')||'dark');
+  document.getElementById('themeBtn').addEventListener('click',()=>setTheme(html.getAttribute('data-theme')==='dark'?'light':'dark'));
+  document.getElementById('themeMob').addEventListener('click',()=>setTheme(html.getAttribute('data-theme')==='dark'?'light':'dark'));
+
+  const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.15});
+  document.querySelectorAll('.fade-up,.fade-left,.fade-right,.fade-scale').forEach(el=>io.observe(el));
+
+  let done=false;
+  const so=new IntersectionObserver(([e])=>{if(e.isIntersecting&&!done){done=true;document.querySelectorAll('.stat-num').forEach(el=>{const t=+el.dataset.t;let c=0;const inc=Math.ceil(t/50);const ti=setInterval(()=>{c+=inc;if(c>=t){el.textContent=t>=1000?(t/1000).toFixed(0)+'K+':t+'+';clearInterval(ti);}else el.textContent=c;},25);});}},{threshold:0.4});
+  const ss=document.getElementById('stats');if(ss)so.observe(ss);
+
+  const tb=document.getElementById('topBtn');
+  window.addEventListener('scroll',()=>tb.style.opacity=window.scrollY>400?'1':'0');
+  tb.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+  const secs=document.querySelectorAll('section[id]');
+  window.addEventListener('scroll',()=>{let cur='';secs.forEach(s=>{if(window.scrollY>=s.offsetTop-100)cur=s.id;});document.querySelectorAll('.nav-a').forEach(a=>{a.classList.toggle('active',a.getAttribute('href')==='#'+cur);});});
+
+  const pc=document.getElementById('particles');
+  if(pc){for(let i=0;i<22;i++){const p=document.createElement('div');p.className='particle';p.style.cssText=`left:${Math.random()*100}%;top:${55+Math.random()*45}%;--dur:${3+Math.random()*6}s;--dl:${Math.random()*6}s;--drift:${(Math.random()-0.5)*90}px;width:${2+Math.random()*4}px;height:${2+Math.random()*4}px;`;pc.appendChild(p);}}
+
+  const fBtns=document.querySelectorAll('.f-btn');
+  fBtns.forEach(btn=>{
+    btn.addEventListener('click',function(){
+      fBtns.forEach(b=>b.classList.remove('on'));this.classList.add('on');
+      filterProds(this.dataset.f);
+    });
+  });
+  function filterProds(cat){
+    document.querySelectorAll('.prod-card').forEach(c=>{
+      const match=cat==='all'||c.dataset.cat===cat;
+      c.style.transition='opacity 0.3s,transform 0.3s';
+      if(match){c.style.display='flex';c.style.flexDirection='column';setTimeout(()=>{c.style.opacity='1';c.style.transform='';},10);}
+      else{c.style.opacity='0';c.style.transform='scale(0.9)';setTimeout(()=>c.style.display='none',300);}
+    });
+  }
+
+  document.querySelectorAll('.dd-menu a[data-cat]').forEach(a=>{
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      const cat=this.dataset.cat;
+      const ps=document.getElementById('products');
+      if(ps)window.scrollTo({top:ps.getBoundingClientRect().top+window.scrollY-80,behavior:'smooth'});
+      setTimeout(()=>filterProds(cat),420);
+      fBtns.forEach(b=>b.classList.remove('on'));
+      const m=[...fBtns].find(b=>b.dataset.f===cat);if(m)m.classList.add('on');
+    });
+  });
+
+  const prods=[
+    {name:'العطور النيش',cat:'niche',desc:'عطور نادرة بتركيزات Extrait de Parfum'},
+    {name:'العطور الفرنسية والشرقية',cat:'east-west',desc:'مزيج سحري شرقي غربي'},
+    {name:'معطرات المنزل',cat:'home',desc:'بخاخات وشموع عطرية'},
+    {name:'الدخون والعود الملكي',cat:'oud',desc:'أجود أنواع العود والمبثوث'},
+    {name:'العناية بالجسم',cat:'body',desc:'زيوت لوشنات معطرات شعر'},
+    {name:'مجموعات الهدايا',cat:'gift',desc:'صناديق فاخرة للمناسبات'},
+  ];
+  const sp=document.getElementById('searchPanel'),si=document.getElementById('searchInput'),sc=document.getElementById('searchClose'),sr=document.getElementById('searchResults');
+  document.getElementById('searchBtn').addEventListener('click',()=>{sp.classList.add('open');setTimeout(()=>si.focus(),350);document.body.style.overflow='hidden';});
+  sc.addEventListener('click',closeSrch);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSrch();});
+  function closeSrch(){sp.classList.remove('open');si.value='';sr.innerHTML='';document.body.style.overflow='';}
+  si.addEventListener('input',function(){
+    const q=this.value.trim();sr.innerHTML='';
+    if(!q)return;
+    const found=prods.filter(p=>p.name.includes(q)||p.desc.includes(q));
+    if(!found.length){sr.innerHTML='<div class="no-res"><i class="fas fa-search" style="font-size:2rem;display:block;margin-bottom:0.5rem;"></i>لا نتائج لـ "'+q+'"</div>';return;}
+    found.forEach(p=>{const d=document.createElement('div');d.className='s-item';d.innerHTML='<h4>'+p.name+'</h4><p>'+p.desc+'</p>';d.onclick=()=>{closeSrch();setTimeout(()=>{const ps=document.getElementById('products');if(ps)window.scrollTo({top:ps.getBoundingClientRect().top+window.scrollY-80,behavior:'smooth'});filterProds(p.cat);fBtns.forEach(b=>b.classList.remove('on'));const m=[...fBtns].find(b=>b.dataset.f===p.cat);if(m)m.classList.add('on');},350);};sr.appendChild(d);});
+  });
+})();
+
+function orderWA(prod){window.open('https://wa.me/201146172767?text='+encodeURIComponent('مرحباً سحر العطور\n\nأود الاستفسار والطلب:\n\nالمنتج: '+prod+'\n\nأرجو التواصل معي، شكراً'),'_blank');}
+function sendForm(){const n=document.getElementById('fName').value||'زبون',s=document.getElementById('fSubj').value||'استفسار',m=document.getElementById('fMsg').value||'';window.open('https://wa.me/201146172767?text='+encodeURIComponent('رسالة من موقع سحر العطور\n\nالاسم: '+n+'\nالموضوع: '+s+'\nالرسالة: '+m),'_blank');}
+</script>
+</body>
+</html>
